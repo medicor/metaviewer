@@ -1,9 +1,9 @@
 {
-  "short_name": "Jaysee",
-  "name": "Jaysee JSON visualizer",
+  "short_name": "Metaviewer",
+  "name": "Metaviewer",
   "display": "standalone",
   "start_url": "/app.html",
-  "theme_color": "#6a1b9a",
+  "theme_color": "#ff5722",
   "background_color": "#fafafa",
   "icons": [{
     "src": "images/android-icon-36x36.png",
