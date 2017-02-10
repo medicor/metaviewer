@@ -222,12 +222,12 @@
 											.attr('font-weight', 'bold')
 											.attr('x', d => d.y+10)
 											.attr('y', d => d.x-10)
-											.text((d) => d.data.FormTitle || d.data.ShortName)
+											.text((d) => d.data.FormID ? `${d.data.FormTitle}` : `${d.data.RegisterName}`)
 										;
 										t.append('tspan')
 											.attr('x', d => d.y+10)
 											.attr('y', d => d.x+20)
-											.text((d) => d.data.FormName || d.data.RegisterName)
+											.text((d) => d.data.FormID ? `${d.data.FormName} (${d.data.FormID})` : `${d.data.ShortName}, ${d.data.Forms.length} formulär`)
 										;
 									})
 							;
