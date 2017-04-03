@@ -108,7 +108,7 @@
 			'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700',
 			'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
 			'bulma.css', // Themed version.
-			'https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js',
+			'https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js',
 			'https://d3js.org/d3.v4.js',
 			'library/butter.js',
 			'app.css'
@@ -237,7 +237,7 @@
 										t.append('tspan')
 											.attr('x', d => d.y+10)
 											.attr('y', d => d.x+20)
-											.text((d) => d.data.FormID ? `${d.data.FormName} (${d.data.FormID})` : `${d.data.ShortName}, ${d.data.Forms.length} formulär`)
+											.text((d) => d.data.FormID ? `${d.data.FormName} (${d.data.FormID})` : `${d.data.ShortName} (${d.data.RegisterID}), ${d.data.Forms.length} formulär`)
 										;
 									})
 							;
