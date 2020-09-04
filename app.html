@@ -65,10 +65,12 @@
 								<span>Spara som bild (SVG)</span>
 							</a>
 						</div>
-						<div class="column is-8">
+						<div class="column is-7">
 						</div>
-						<div class="column is-2">
-							<img src="images/android-icon-48x48.png" style="vertical-align: middle" />&nbsp;Metaviewer <a href="//medicor.se">Medicor AB</a>
+						<div class="column is-3">
+							<div style="float: right">
+								<img src="images/android-icon-48x48.png" style="vertical-align: middle" />&nbsp;Metaviewer&nbsp;<a href="//medicor.se">Medicor&nbsp;AB</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -113,7 +115,7 @@
 					loaded: false
 				},
 				created() {
-					d3.json(`http://stratum.registercentrum.se/api/metadata/registers?apikey=bK3H9bwaG4o=`, (anError, aResponse) => {
+					d3.json(`//stratum.registercentrum.se/api/metadata/registers?apikey=bK3H9bwaG4o=`, (anError, aResponse) => {
 						let sn = window.location.pathname.substr(1).toUpperCase();
 
 						if (anError) {
@@ -160,7 +162,7 @@
 						// Collection of registers = https://stratum.registercentrum.se/api/metadata/registers?apikey=bK3H9bwaG4o=
 						// Instance of a register = https://stratum.registercentrum.se/api/metadata/registers/100?apikey=bK3H9bwaG4o=
 						// Instance of a form = https://stratum.registercentrum.se/api/metadata/forms/1001?apikey=bK3H9bwaG4o=
-						d3.json(`http://stratum.registercentrum.se/api/metadata/registers/${this.current.RegisterID}?apikey=bK3H9bwaG4o=`, aResponse => {
+						d3.json(`//stratum.registercentrum.se/api/metadata/registers/${this.current.RegisterID}?apikey=bK3H9bwaG4o=`, aResponse => {
 							window.history.pushState({}, 'Metaviewer', `${this.current.ShortName.toLowerCase()}`); //TODO: need callback to handle uri changes (back button, etc.).
 //							this.loaded = true;
 							const container = d3.select('main').append('svg').append('g');
